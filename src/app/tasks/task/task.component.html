@@ -1,0 +1,12 @@
+<div class="task" [class.completed]="task.completed">
+    <span class="w-75">{{ task.title }}</span>
+    <div class="actions">
+        <button class="btn btn-sm" [class.btn-success]="task.completed" [class.btn-secondary]="!task.completed"
+            (click)="onToggleCompletion()">
+            <i class="fa-regular" [class.fa-check-square]="task.completed" [class.fa-square]="!task.completed"></i>
+        </button>
+        <button class="btn btn-danger btn-sm" (click)="onDeleteTask()">
+            <i class="fa-regular fa-trash-alt"></i>
+        </button>
+    </div>
+</div>
